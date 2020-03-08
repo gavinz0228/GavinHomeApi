@@ -2,10 +2,23 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <GenerateProgramFile>false</GenerateProgramFile>
   </PropertyGroup>
 
  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
   <None Update="youtube-dl.exe" CopyToOutputDirectory="PreserveNewest" />
 </ItemGroup>
+
+ <ItemGroup>
+   <PackageReference Include="Google.Apis.Oauth2.v2" Version="1.42.0.1602" />
+   <PackageReference Include="Google.Apis.YouTube.v3" Version="1.42.0.1758" />
+   <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+   <PackageReference Include="xunit" Version="2.4.1" />
+   <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+     <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+     <PrivateAssets>all</PrivateAssets>
+   </PackageReference>
+ </ItemGroup>
 
 </Project>

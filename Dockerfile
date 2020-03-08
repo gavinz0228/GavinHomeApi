@@ -1,14 +1,21 @@
-FROM microsoft/dotnet:3.0-sdk AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0 AS build
 WORKDIR /app
 
 COPY *.csproj ./
 RUN dotnet restore
 
+RUN dotnet --version
+
 COPY . ./
 RUN dotnet publish -c Release -o out
 
-FROM microsoft/dotnet:3.0-aspnetcore-runtime AS runtime
-WORKDIR /app
-COPY --from=build /app/out .
+#FROM mcr.microsoft.com/dotnet/core/aspnet:3.0 AS runtime
+#WORKDIR /app
+#COPY --from=build /app/out .
 
-ENTRYPOINT ["dotnet","GavinHomeApi.dll"]
+RUN apt-get update
+RUN apt-get --assume-yes install youtube-dl
+
+EXPOSE 80  
+
+ENTRYPOINT ["dotnet","out/GavinHomeApi.dll"]

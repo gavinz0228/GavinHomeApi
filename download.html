@@ -1,0 +1,23 @@
+<style>
+
+</style>
+<body>
+    <textarea id ="urls" width = "100%" height = "50%">
+
+    </textarea>
+    <button onclick = "download()">Run</button>
+<script>
+    function download(){
+    var urlEle = document.getElementById("urls");
+    var content = urlEle.value;
+    //console.log(content);
+    var urls = content.split("\n");
+    urls.forEach(function(url){
+        url = url.trim();
+        if(url.startsWith("http")){
+            window.open("https://localhost:5001/YoutubeDownload/DownloadAsMp3?url=" + url);
+        }
+    });
+    }    
+    </script>
+</body>

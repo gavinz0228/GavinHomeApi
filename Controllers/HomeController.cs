@@ -1,4 +1,5 @@
 using System;
+using System.Web;
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
@@ -10,13 +11,15 @@ using GavinHomeApi.Utilities;
 namespace GavinHomeApi.Controllers
 {
     [Route("")]
-    public class HomeController : ControllerBase
+    public class HomeController : Controller
     {
         [HttpGet]
-        public ActionResult Index()
+        public ViewResult Index()
         {
-            string usage = "Download Youtube Video as a mp3 file http://bygavin.com:8000/YoutubeDownload/DownloadAsMp3?url=<Youtbe URL>";
-            return Ok(usage);
+            string baseUrl = Request.Scheme + "://" + Request.Host;
+            ViewBag.Usage = $"Download a single Youtube Video as a mp3 file {baseUrl}/YoutubeDownload/DownloadAsMp3?url=<Youtbe URL>";
+            
+            return View();
         }
     }
 }
