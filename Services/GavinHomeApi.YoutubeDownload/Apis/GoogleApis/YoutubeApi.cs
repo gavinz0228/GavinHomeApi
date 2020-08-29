@@ -12,7 +12,7 @@ using Google.Apis.Util.Store;
 using Google.Apis.YouTube.v3;
 using Google.Apis.YouTube.v3.Data;
 
-namespace GavinHomeApi.Apis.GoogleApis
+namespace GavinHomeApi.YoutubeDownload.Apis.GoogleApis
 {
     public class YouTubeApi
     {
