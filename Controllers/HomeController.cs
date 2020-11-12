@@ -16,9 +16,6 @@ namespace GavinHomeApi.Controllers
         [HttpGet]
         public ViewResult Index()
         {
-            string baseUrl = Request.Scheme + "://" + Request.Host;
-            ViewBag.Usage = $"Download a single Youtube Video as a mp3 file {baseUrl}/YoutubeDownload/DownloadAsMp3?url=<Youtbe URL>";
-            
             return View();
         }
     }
