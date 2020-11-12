@@ -1,3 +1,12 @@
-obj/
-Properties/
-bin/
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/GavinHomeApi.Utilities/bin/Debug
+/GavinHomeApi.Utilities/obj
+/Services/GavinHomeApi.YoutubeDownload/.vs
+/Services/GavinHomeApi.YoutubeDownload/.vscode
+/.vs/GavinHomeApi
+/Properties/
+/bin/
+/obj/

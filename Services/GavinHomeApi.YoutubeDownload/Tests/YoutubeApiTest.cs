@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using Xunit;
-using GavinHomeApi.Apis.GoogleApis;
+using GavinHomeApi.YoutubeDownload.Apis.GoogleApis;
 
-namespace GavinHomeApi.Tests
+namespace GavinHomeApi.YoutubeDownload.Tests
 {
     public class YoutubeApiTest
     {

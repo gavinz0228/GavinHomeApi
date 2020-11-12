@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace GavinHomeApi.Models
+namespace GavinHomeApi.YoutubeDownload.Models
 {
     public class DownloadTask
     {
