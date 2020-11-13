@@ -6,10 +6,9 @@
 /GavinHomeApi.Utilities/obj
 /Services/GavinHomeApi.YoutubeDownload/.vs
 /Services/GavinHomeApi.YoutubeDownload/.vscode
+/Services/GavinHomeApi.YoutubeDownload/obj
+/Services/GavinHomeApi.YoutubeDownload/bin
 /.vs/GavinHomeApi
-<<<<<<< HEAD
 /Properties/
 /bin/
 /obj/
-=======
->>>>>>> 3322475e28eb3b32a2161b4b9b549057a4f605e6
