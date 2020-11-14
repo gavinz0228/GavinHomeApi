@@ -10,8 +10,9 @@
 <body class="container-fluid">
     <p class="row">
         <h2 class="text-center">YouTube Download Tool</h1>
-        <h3 class="text-center">Download YouTube Videos as MP3 File for Free</h2>
+        <h4 class="text-center">Download YouTube Videos as MP3 File for Free</h4>
     </p>
+    <br/>
     <div class="col-xs-12 col-md-10 offset-md-1 jumbotron">
         <form class="form-group col-xs-12 col-sm-12 row" method = "get" action="/YoutubeDownload/DownloadAsMp3/">
 
@@ -21,16 +22,16 @@
                     <div class="input-group-text"> Single URL</div>
                 </div>
                 <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Put your YouTube URL here" name ="url">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Download</button>
             </div>
         </form>
         <form class="row col-xs-12 col-sm-12" method="post" action="/YoutubeDownload/createTaskForm">
             <lable class="form-control">Download and Zip from Multiple URLs </lable>
             <textarea name="urls" class="form-control" rows="20"></textarea> 
-            <input type="submit" class="form-control btn btn-primary" text="Start Download Task"/>
+            <input type="submit" class="form-control btn btn-primary" text="Start Download Task" value="Download Batch"/>
         </form>
     </div>
-
+    <p class="text-center">Built by Gavin Zhang</p>
 
 </body>
 </html>  

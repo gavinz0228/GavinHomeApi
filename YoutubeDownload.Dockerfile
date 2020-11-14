@@ -16,6 +16,7 @@ COPY --from=build /Services/GavinHomeApi.YoutubeDownload/out .
 
 RUN apt-get update
 RUN apt-get --assume-yes install youtube-dl
+RUN apt-get --assume-yes install ffmpeg
 
 EXPOSE 80  
 
