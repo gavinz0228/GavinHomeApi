@@ -17,6 +17,6 @@ COPY --from=build /Services/GavinHomeApi.YoutubeDownload/out .
 RUN apt-get update
 RUN apt-get --assume-yes install youtube-dl
 
-EXPOSE 2222  80  
+EXPOSE 80  
 
 ENTRYPOINT ["dotnet","app/GavinHomeApi.YoutubeDownload.dll"]
