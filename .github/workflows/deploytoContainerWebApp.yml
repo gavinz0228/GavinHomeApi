@@ -21,7 +21,7 @@ jobs:
     - name: Build and push image to ACR
       id: build-image
       run: |
-        docker build "$GITHUB_WORKSPACE/Services/GavinHomeApi.YoutubeDownload" -f  "Services/GavinHomeApi.YoutubeDownload/Dockerfile" -t gavinhomeapiservices.azurecr.io/youtubedownload-img:${{ github.sha }}
+        docker build "$GITHUB_WORKSPACE/" -f  "YoutubeDownload.Dockerfile" -t gavinhomeapiservices.azurecr.io/youtubedownload-img:${{ github.sha }}
         docker push gavinhomeapiservices.azurecr.io/youtubedownload-img:${{ github.sha }}
 
     - name: Set Web App ACR authentication
