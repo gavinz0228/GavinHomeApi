@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 
 COPY ./GavinHomeApi.Utilities ./GavinHomeApi.Utilities
 COPY ./Services/GavinHomeApi.YoutubeDownload ./Services/GavinHomeApi.YoutubeDownload
@@ -10,7 +10,7 @@ RUN dotnet --version
 
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS runtime
+FROM mcr.microsoft.com/dotnet/runtime:3.1 AS runtime
 WORKDIR /app
 COPY --from=build /Services/GavinHomeApi.YoutubeDownload/out .
 
