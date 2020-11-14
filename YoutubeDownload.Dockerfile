@@ -8,7 +8,7 @@ RUN dotnet restore ./Services/GavinHomeApi.YoutubeDownload
 
 RUN dotnet --version
 
-RUN dotnet publish ./Services/GavinHomeApi.YoutubeDownload -c Release -o out
+RUN dotnet publish ./Services/GavinHomeApi.YoutubeDownload -c Release -o ./Services/GavinHomeApi.YoutubeDownload/out
 
 FROM mcr.microsoft.com/dotnet/runtime:3.1 AS runtime
 WORKDIR /app
