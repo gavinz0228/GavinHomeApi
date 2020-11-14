@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 COPY ./GavinHomeApi.Utilities ./GavinHomeApi.Utilities
 COPY ./Services/GavinHomeApi.YoutubeDownload ./Services/GavinHomeApi.YoutubeDownload
 
-WORKDIR ./Services/GavinHomeApi.YoutubeDownload
+#WORKDIR ./Services/GavinHomeApi.YoutubeDownload
 RUN dotnet restore ./Services/GavinHomeApi.YoutubeDownload
 
 RUN dotnet --version
