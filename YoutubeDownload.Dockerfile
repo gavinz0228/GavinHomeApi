@@ -15,8 +15,8 @@ WORKDIR /app
 COPY --from=build /Services/GavinHomeApi.YoutubeDownload/out .
 
 RUN apt-get update
-RUN apt-get --assume-yes install youtube-dl
-RUN apt-get --assume-yes install ffmpeg
+RUN apt-get --assume-yes install python3-pip
+RUN pip3 install youtube-dl
 
 EXPOSE 80  
 
